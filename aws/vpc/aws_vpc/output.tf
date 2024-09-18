@@ -6,6 +6,3 @@ output "vpc_id" {
 output "vpc_arn" {
   value = aws_vpc.company_service_env_vpc.arn
 }
-# output "vpc_name" {
-#   value = aws_vpc.company_service_env_vpc.name
-# }

@@ -1,12 +1,11 @@
-# aws_vpc
+# aws_internet_gateway
 #------------------------------------------------------------------
-resource "aws_vpc" "company_service_env_vpc" {
-  cidr_block = var.cidr_block
-  enable_dns_hostnames = var.enable_dns_hostnames
+resource "aws_internet_gateway" "company_service_env_igw" {
+  vpc_id = var.vpc_id
 
   tags = {
-    Name       = "${var.company}-${var.service}-${var.env}-vpc"
-    
+    Name       = "${var.company}-${var.service}-${var.env}-igw"
+
     cz-project = var.service
     cz-stage   = var.env
     cz-org     = var.cz_org
