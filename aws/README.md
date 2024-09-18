@@ -7,13 +7,13 @@ soo-terraform-modules
     ec2
       aws_instance
     vpc
-      aws_vpc
-      aws_subnet
-      aws_security_group
-      aws_route_table-pub
-      aws_route_table-pri
-      aws_nat_gateway
       aws_internet_gateway
+      aws_nat_gateway
+      aws_route_table-pri
+      aws_route_table-pub
+      aws_security_group
+      aws_subnet
+      aws_vpc
     tgw
       aws_ec2_transit_gateway
     elb
