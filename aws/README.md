@@ -16,8 +16,8 @@ soo-terraform-modules.git//
     tgw/
       aws_ec2_transit_gateway
     elb/
-      aws_lb_target_group
       aws_lb
+      aws_lb_target_group
     rds/
       aws_db_instance
     backup/
