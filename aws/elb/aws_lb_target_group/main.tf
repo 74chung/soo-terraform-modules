@@ -25,6 +25,10 @@ resource "aws_lb_target_group" "company_service_env_function_tg" {
 }
 resource "aws_lb_target_group_attachment" "attachment" {
   target_group_arn = aws_lb_target_group.company_service_env_function_tg.arn
-  target_id        = var.target_id
   port             = var.port
+  for_each  = {
+    for k, v in var.for_each_target_id :
+    k => v
+  }
+  target_id = "${each.value}"
 }

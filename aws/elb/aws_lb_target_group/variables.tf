@@ -15,8 +15,8 @@ variable "vpc_id" {
 variable "health_check_port" {
   type = string
 }
-variable "target_id" {
-  type = string
+variable "for_each_target_id" {
+  type = list
 }
 
 variable "company" {
