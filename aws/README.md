@@ -6,6 +6,9 @@ soo-terraform-modules.git//
     - aws_iam_policy
   - ec2/
     - aws_instance
+  - elb/
+    - aws_lb
+    - aws_lb_target_group
   - vpc/
     - aws_internet_gateway
     - aws_nat_gateway
@@ -15,9 +18,6 @@ soo-terraform-modules.git//
     - aws_vpc
   - tgw/
     - aws_ec2_transit_gateway
-  - elb/
-    - aws_lb
-    - aws_lb_target_group
   - rds/
     - aws_db_instance
   - backup/
