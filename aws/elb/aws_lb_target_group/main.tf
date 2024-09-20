@@ -24,20 +24,7 @@ resource "aws_lb_target_group" "company_service_env_function_tg" {
   }
 }
 resource "aws_lb_target_group_attachment" "attachment" {
-  # for_each = {
-  #   for k, v in module.common_prd_pub_a_ec2.*.ec2_id :
-  #   # for k, v in module.common_prd_pub_a_ec2 :
-  #   k => v
-  # }
-  # for_each = toset([ => 이건 되긴함!
-  #   module.ec2_common_prd[0].id,
-  #   module.ec2_common_prd[1].id,
-  #   module.ec2_common_prd[2].id,
-  # ])
-  # for_each = toset([module.ec2_common_prd.*.id]) => 이건 안됨!
-
   target_group_arn = aws_lb_target_group.company_service_env_function_tg.arn
-  # target_group_arn = module.common_prd_pub_a_tg.tg_arn
   target_id        = var.target_id
   port             = var.port
 }
