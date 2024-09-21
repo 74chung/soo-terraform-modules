@@ -9,6 +9,9 @@ soo-terraform-modules.git//
   - elb/
     - aws_lb
     - aws_lb_target_group
+  - rds/
+    - aws_db_instance
+    - aws_db_subnet_group
   - vpc/
     - aws_internet_gateway
     - aws_nat_gateway
@@ -18,8 +21,6 @@ soo-terraform-modules.git//
     - aws_vpc
   - tgw/
     - aws_ec2_transit_gateway
-  - rds/
-    - aws_db_instance
   - backup/
     - aws_backup_plan
     - aws_backup_vault
