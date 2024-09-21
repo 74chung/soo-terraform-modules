@@ -12,6 +12,10 @@ soo-terraform-modules.git//
   - rds/
     - aws_db_instance
     - aws_db_subnet_group
+  - transit_gateway/
+    - aws_ec2_transit_gateway
+    - aws_ec2_transit_gateway_route_table
+    - aws_ec2_transit_gateway_vpc_attachment
   - vpc/
     - aws_internet_gateway
     - aws_nat_gateway
@@ -19,8 +23,6 @@ soo-terraform-modules.git//
     - aws_security_group
     - aws_subnet
     - aws_vpc
-  - tgw/
-    - aws_ec2_transit_gateway
   - backup/
     - aws_backup_plan
     - aws_backup_vault
