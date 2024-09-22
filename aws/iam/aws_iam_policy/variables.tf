@@ -1,6 +1,6 @@
 # aws_iam_policy
 #------------------------------------------------------------------
-variable "iam_policy" {
+variable "policy" {
   type = string
 }
 

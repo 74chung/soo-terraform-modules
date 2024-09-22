@@ -6,7 +6,7 @@ resource "aws_iam_policy" "company_account_function_policy" {
   description = "${var.company}-${var.account}-${var.function}-policy"
 
   policy = <<EOF
-${var.iam_policy}
+${var.policy}
 EOF
 
   tags = {
