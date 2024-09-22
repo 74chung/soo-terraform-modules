@@ -25,8 +25,8 @@ soo-terraform-modules.git//
     - aws_vpc
   - backup/
     - aws_backup_plan
-    - aws_backup_vault
     - aws_backup_selection
+    - aws_backup_vault
   - eventbridge_scheduler/
     - aws_scheduler_schedule
     - aws_scheduler_schedule_group
