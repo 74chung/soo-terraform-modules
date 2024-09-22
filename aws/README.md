@@ -10,6 +10,9 @@ soo-terraform-modules.git//
   - elb/
     - aws_lb
     - aws_lb_target_group
+  - eventbridge_scheduler/
+    - aws_scheduler_schedule
+    - aws_scheduler_schedule_group
   - iam/
     - aws_iam_policy
     - aws_iam_role
@@ -27,9 +30,6 @@ soo-terraform-modules.git//
     - aws_security_group
     - aws_subnet
     - aws_vpc
-  - eventbridge_scheduler/
-    - aws_scheduler_schedule
-    - aws_scheduler_schedule_group
   - lambda/
     - aws_lambda_function
 
