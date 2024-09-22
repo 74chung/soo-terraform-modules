@@ -4,8 +4,8 @@ resource "aws_backup_plan" "company_service_env_backupplan" {
   name = "${var.company}-${var.service}-${var.env}-backupplan"
 
   rule {
-    rule_name         = "${var.company}-${var.service}-${var.env}-daily-${var.daily_retention}-backuprule"
     target_vault_name = var.target_vault_name
+    rule_name         = "${var.company}-${var.service}-${var.env}-daily-${var.daily_retention}-backuprule"
     schedule          = var.daily_schedule # UTC
     start_window      = var.daily_start_window # Minutes
     completion_window = var.daily_completion_window # Minutes
@@ -24,8 +24,8 @@ resource "aws_backup_plan" "company_service_env_backupplan" {
     }
   }
   rule {
-    rule_name         = "${var.company}-${var.service}-${var.env}-weekly-${var.weekly_retention}-backuprule"
     target_vault_name = var.target_vault_name
+    rule_name         = "${var.company}-${var.service}-${var.env}-weekly-${var.weekly_retention}-backuprule"
     schedule          = var.weekly_schedule # UTC
     start_window      = var.weekly_start_window # Minutes
     completion_window = var.weekly_completion_window # Minutes
