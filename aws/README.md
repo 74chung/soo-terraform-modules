@@ -4,6 +4,10 @@ soo-terraform-modules.git//
   - iam/
     - aws_iam_role
     - aws_iam_policy
+  - backup/
+    - aws_backup_plan
+    - aws_backup_selection
+    - aws_backup_vault
   - ec2/
     - aws_instance
   - elb/
@@ -23,10 +27,6 @@ soo-terraform-modules.git//
     - aws_security_group
     - aws_subnet
     - aws_vpc
-  - backup/
-    - aws_backup_plan
-    - aws_backup_selection
-    - aws_backup_vault
   - eventbridge_scheduler/
     - aws_scheduler_schedule
     - aws_scheduler_schedule_group
