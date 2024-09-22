@@ -1,9 +1,6 @@
 
 soo-terraform-modules.git//
 - aws/
-  - iam/
-    - aws_iam_role
-    - aws_iam_policy
   - backup/
     - aws_backup_plan
     - aws_backup_selection
@@ -13,6 +10,9 @@ soo-terraform-modules.git//
   - elb/
     - aws_lb
     - aws_lb_target_group
+  - iam/
+    - aws_iam_policy
+    - aws_iam_role
   - rds/
     - aws_db_instance
     - aws_db_subnet_group
