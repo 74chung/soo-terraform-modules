@@ -10,7 +10,7 @@ resource "aws_instance" "company_service_env_function_ec2" {
 
   root_block_device {
     volume_type           = var.root_ebs_volume_type
-    volume_size           = var.root_ebs_volume_size
+    volume_size           = var.root_ebs_volume_size # GB
     encrypted             = var.root_ebs_encrypted
     delete_on_termination = var.root_ebs_delete_on_termination
   }
