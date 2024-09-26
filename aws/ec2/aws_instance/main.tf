@@ -13,6 +13,18 @@ resource "aws_instance" "company_service_env_function_ec2" {
     volume_size           = var.root_ebs_volume_size # GB
     encrypted             = var.root_ebs_encrypted
     delete_on_termination = var.root_ebs_delete_on_termination
+    tags = {
+      Name       = "${var.company}-${var.service}-${var.env}-${var.function}${var.number}-root-vol"
+
+      cz-project = var.service
+      cz-stage   = var.env
+      cz-org     = var.cz_org
+      cz-owner   = var.cz_owner
+      cz-appl    = var.cz_appl
+      cz-ext1    = var.cz_ext1
+      cz-ext2    = var.cz_ext2
+      cz-ext3    = var.cz_ext3
+    }
   }
 
   tags = {
