@@ -19,6 +19,19 @@ variable "vpc_security_group_ids" {
   type = list
 }
 
+variable "root_ebs_volume_type" {
+  type = list
+}
+variable "root_ebs_volume_size" {
+  type = list
+}
+variable "root_ebs_encrypted" {
+  type = list
+}
+variable "root_ebs_delete_on_termination" {
+  type = list
+}
+
 variable "company" {
   type = string
 }

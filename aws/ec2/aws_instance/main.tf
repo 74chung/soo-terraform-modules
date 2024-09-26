@@ -8,6 +8,13 @@ resource "aws_instance" "company_service_env_function_ec2" {
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = var.vpc_security_group_ids
 
+  root_block_device {
+    volume_type           = var.root_ebs_volume_type
+    volume_size           = var.root_ebs_volume_size
+    encrypted             = var.root_ebs_encrypted
+    delete_on_termination = var.root_ebs_delete_on_termination
+  }
+
   tags = {
     Name       = "${var.company}-${var.service}-${var.env}-${var.function}${var.number}-ec2"
   
