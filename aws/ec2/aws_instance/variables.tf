@@ -20,16 +20,16 @@ variable "vpc_security_group_ids" {
 }
 
 variable "root_ebs_volume_type" {
-  type = list
+  type = string
 }
 variable "root_ebs_volume_size" {
-  type = list
+  type = string
 }
 variable "root_ebs_encrypted" {
-  type = list
+  type = string
 }
 variable "root_ebs_delete_on_termination" {
-  type = list
+  type = string
 }
 
 variable "company" {
