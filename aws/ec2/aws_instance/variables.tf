@@ -18,6 +18,9 @@ variable "subnet_id" {
 variable "vpc_security_group_ids" {
   type = list
 }
+variable "disable_api_termination" {
+  type = string
+}
 
 variable "root_ebs_volume_type" {
   type = string

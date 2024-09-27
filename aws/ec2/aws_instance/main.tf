@@ -7,6 +7,7 @@ resource "aws_instance" "company_service_env_function_ec2" {
   associate_public_ip_address = var.associate_public_ip_address
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = var.vpc_security_group_ids
+  disable_api_termination     = var.disable_api_termination
 
   root_block_device {
     volume_type           = var.root_ebs_volume_type
