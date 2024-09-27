@@ -38,9 +38,6 @@ variable "company" {
 variable "function" {
   type = string
 }
-variable "number" {
-  type = string
-}
 
 variable "service" {
   type = string

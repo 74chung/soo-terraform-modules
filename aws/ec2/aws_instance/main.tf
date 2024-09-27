@@ -14,7 +14,7 @@ resource "aws_instance" "company_service_env_function_ec2" {
     encrypted             = var.root_ebs_encrypted
     delete_on_termination = var.root_ebs_delete_on_termination
     tags = {
-      Name       = "${var.company}-${var.service}-${var.env}-${var.function}${var.number}-root-vol"
+      Name       = "${var.company}-${var.service}-${var.env}-${var.function}-root-vol"
 
       cz-project = var.service
       cz-stage   = var.env
@@ -28,7 +28,7 @@ resource "aws_instance" "company_service_env_function_ec2" {
   }
 
   tags = {
-    Name       = "${var.company}-${var.service}-${var.env}-${var.function}${var.number}-ec2"
+    Name       = "${var.company}-${var.service}-${var.env}-${var.function}-ec2"
   
     cz-project = var.service
     cz-stage   = var.env
