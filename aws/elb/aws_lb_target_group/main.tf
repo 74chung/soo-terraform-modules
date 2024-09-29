@@ -8,8 +8,8 @@ resource "aws_lb_target_group" "company_service_env_function_tg" {
   vpc_id      = var.vpc_id
 
   health_check {
-    port     = var.port
-    protocol = var.health_check_port
+    port     = var.port # default=traffic-port
+    protocol = var.health_check_protocol # TCP, HTTP, HTTPS
   }
 
   tags = {

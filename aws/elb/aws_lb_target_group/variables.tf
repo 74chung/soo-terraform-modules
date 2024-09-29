@@ -12,9 +12,11 @@ variable "protocol" {
 variable "vpc_id" {
   type = string
 }
-variable "health_check_port" {
+
+variable "health_check_protocol" {
   type = string
 }
+
 variable "for_each_target_id" {
   type = list
 }
