@@ -1,6 +1,8 @@
 
 soo-terraform-modules.git//
 - aws/
+  - auto_scaling/ -YET
+    - aws_autoscaling_group
   - backup/
     - aws_backup_plan
     - aws_backup_selection
@@ -16,6 +18,8 @@ soo-terraform-modules.git//
   - iam/
     - aws_iam_policy
     - aws_iam_role
+  - lambda/ -YET
+    - aws_lambda_function
   - rds/
     - aws_db_instance
     - aws_db_subnet_group
@@ -30,12 +34,6 @@ soo-terraform-modules.git//
     - aws_security_group
     - aws_subnet
     - aws_vpc
-  - lambda/
-    - aws_lambda_function
-
-
-
-
 
 
 
