@@ -8,8 +8,10 @@ resource "aws_lb_target_group" "company_service_env_function_tg" {
   vpc_id      = var.vpc_id
 
   health_check {
-    port     = var.health_check_port # default=traffic-port
-    protocol = var.health_check_protocol # TCP, HTTP, HTTPS
+    protocol            = var.health_check_protocol # TCP, HTTP, HTTPS
+    port                = var.health_check_port # default=traffic-port
+    healthy_threshold   = var.healthy_threshold # default=3
+    unhealthy_threshold = var.unhealthy_threshold # default=3
   }
 
   tags = {

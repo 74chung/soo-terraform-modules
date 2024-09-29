@@ -13,10 +13,16 @@ variable "vpc_id" {
   type = string
 }
 
+variable "health_check_protocol" {
+  type = string
+}
 variable "health_check_port" {
   type = string
 }
-variable "health_check_protocol" {
+variable "healthy_threshold" {
+  type = string
+}
+variable "unhealthy_threshold" {
   type = string
 }
 
