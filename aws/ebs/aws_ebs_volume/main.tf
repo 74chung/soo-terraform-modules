@@ -2,6 +2,7 @@
 #------------------------------------------------------------------
 resource "aws_ebs_volume" "company_service_env_function_vol" {
   availability_zone = var.availability_zone
+  type              = var.type
   size              = var.size
   encrypted         = var.encrypted
 

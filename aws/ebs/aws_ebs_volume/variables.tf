@@ -3,6 +3,9 @@
 variable "availability_zone" {
   type = string
 }
+variable "type" {
+  type = string
+}
 variable "size" {
   type = string
 }
