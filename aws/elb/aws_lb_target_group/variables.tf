@@ -26,9 +26,9 @@ variable "unhealthy_threshold" {
   type = string
 }
 
-variable "for_each_target_id" {
-  type = list
-}
+# variable "for_each_target_id" {
+#   type = list
+# }
 
 variable "company" {
   type = string
