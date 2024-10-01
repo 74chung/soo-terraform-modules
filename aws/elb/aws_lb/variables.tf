@@ -6,9 +6,6 @@ variable "internal" {
 variable "load_balancer_type" {
   type = string
 }
-variable "ip_address_type" {
-  type = string
-}
 variable "security_groups" {
   type = list
 }
