@@ -3,8 +3,8 @@
 resource "aws_lb_target_group" "company_service_env_function_tg" {
   name        = "${var.company}-${var.service}-${var.env}-${var.function}-tg"
   target_type = var.target_type
-  port        = var.port
   protocol    = var.protocol
+  port        = var.port
   vpc_id      = var.vpc_id
 
   health_check {
