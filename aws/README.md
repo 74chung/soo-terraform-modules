@@ -9,6 +9,7 @@ soo-terraform-modules.git//
     - aws_backup_vault
   - ec2/
     - aws_instance
+    - aws_launch_template
   - elb/
     - aws_lb
     - aws_lb_target_group
