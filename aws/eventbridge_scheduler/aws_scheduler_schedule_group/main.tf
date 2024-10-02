@@ -1,7 +1,7 @@
 # aws_scheduler_schedule_group
 #------------------------------------------------------------------
-resource "aws_scheduler_schedule_group" "company_service_env_schedule_grp" {
-  name = "${var.company}-${var.service}-${var.env}-schedule-grp"
+resource "aws_scheduler_schedule_group" "company_service_function_schedule_grp" {
+  name = "${var.company}-${var.service}-${var.function}-schedule-grp"
 
   tags = {
     cz-project = var.service

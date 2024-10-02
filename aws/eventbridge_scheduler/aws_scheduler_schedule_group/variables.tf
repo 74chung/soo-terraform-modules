@@ -3,6 +3,9 @@
 variable "company" {
   type = string
 }
+variable "function" {
+  type = string
+}
 
 variable "service" {
   type = string
