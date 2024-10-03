@@ -41,12 +41,6 @@ variable "company" {
 variable "service" {
   type = string
 }
-variable "env" {
-  type = string
-}
-variable "target" {
-  type = string
-}
 variable "function" {
   type = string
 }

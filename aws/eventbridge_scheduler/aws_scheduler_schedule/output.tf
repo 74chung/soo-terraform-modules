@@ -1,11 +1,11 @@
 # aws_scheduler_schedule
 #------------------------------------------------------------------
 output "schedule_id" {
-  value = aws_scheduler_schedule.company_service_env_target_function_schedule.id
+  value = aws_scheduler_schedule.company_service_function_schedule.id
 }
 output "schedule_arn" {
-  value = aws_scheduler_schedule.company_service_env_target_function_schedule.arn
+  value = aws_scheduler_schedule.company_service_function_schedule.arn
 }
 output "schedule_name" {
-  value = aws_scheduler_schedule.company_service_env_target_function_schedule.name
+  value = aws_scheduler_schedule.company_service_function_schedule.name
 }

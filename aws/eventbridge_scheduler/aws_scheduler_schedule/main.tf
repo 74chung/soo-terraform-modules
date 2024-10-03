@@ -1,8 +1,8 @@
 # aws_scheduler_schedule
 #------------------------------------------------------------------
-resource "aws_scheduler_schedule" "company_service_env_target_function_schedule" {
-  name        = "${var.company}-${var.service}-${var.env}-${var.target}-${var.function}-schedule"
-  description = "${var.company}-${var.service}-${var.env}-${var.target}-${var.function}-schedule"
+resource "aws_scheduler_schedule" "company_service_function_schedule" {
+  name        = "${var.company}-${var.service}-${var.function}-schedule"
+  description = "${var.company}-${var.service}-${var.function}-schedule"
   group_name  = var.group_name
 
   flexible_time_window {
