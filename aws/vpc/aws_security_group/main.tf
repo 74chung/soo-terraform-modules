@@ -1,8 +1,9 @@
 # aws_security_group
 #------------------------------------------------------------------
 resource "aws_security_group" "company_service_env_function_sg" {
-  name     = "${var.company}-${var.service}-${var.env}-${var.function}-sg"
-  vpc_id   = var.vpc_id
+  name        = "${var.company}-${var.service}-${var.env}-${var.function}-sg"
+  description = var.description
+  vpc_id      = var.vpc_id
 
   tags = {
     Name       = "${var.company}-${var.service}-${var.env}-${var.function}-sg"
