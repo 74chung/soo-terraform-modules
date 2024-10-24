@@ -1,7 +1,7 @@
 
 soo-terraform-modules.git//
 - aws/
-  - auto_scaling/ -YET
+  - auto_scaling/
     - aws_autoscaling_group
   - backup/
     - aws_backup_plan
