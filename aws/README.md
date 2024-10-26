@@ -24,6 +24,8 @@ soo-terraform-modules.git//
   - rds/
     - aws_db_instance
     - aws_db_subnet_group
+  - s3/
+    - aws_s3_bucket
   - transit_gateway/
     - aws_ec2_transit_gateway
     - aws_ec2_transit_gateway_route_table
