@@ -8,9 +8,9 @@ output "cluster_arn" {
 }
 # aws_rds_cluster_instance
 #------------------------------------------------------------------
-output "cluster_instance_id" {
-  value = aws_rds_cluster_instance.company1_alpha_dev_main_aurorapostgres_instance.id
+output "cluster_instance_ids" {
+  value = aws_rds_cluster_instance.company1_alpha_dev_main_aurorapostgres_instance[*].id
 }
-output "cluster_instance_arn" {
-  value = aws_rds_cluster_instance.company1_alpha_dev_main_aurorapostgres_instance.arn
+output "cluster_instance_arns" {
+  value = aws_rds_cluster_instance.company1_alpha_dev_main_aurorapostgres_instance[*].arn
 }
