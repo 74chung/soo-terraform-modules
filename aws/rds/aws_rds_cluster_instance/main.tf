@@ -43,7 +43,7 @@ resource "aws_rds_cluster_instance" "company1_alpha_dev_main_aurorapostgres_inst
   engine             = aws_rds_cluster.company1_alpha_dev_main_aurorapostgres_cluster.engine
   engine_version     = aws_rds_cluster.company1_alpha_dev_main_aurorapostgres_cluster.engine_version
 
-  count                   = var.count # Total Instance Count
+  count                   = var.instance_count # Total Instance Count
   identifier              = "${var.company}-${var.service}-${var.env}-${var.function}-${count.index}" # 배포 후 identifier 정리
   instance_class          = var.instance_class
   db_parameter_group_name = var.db_parameter_group_name

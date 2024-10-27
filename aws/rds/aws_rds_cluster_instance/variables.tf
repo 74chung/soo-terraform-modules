@@ -90,7 +90,7 @@ variable "cz_ext3" {
 }
 # aws_rds_cluster_instance
 #------------------------------------------------------------------
-variable "count" { # Total Instance Count
+variable "instance_count" { # Total Instance Count
   type = string
 }
 variable "instance_class" {
