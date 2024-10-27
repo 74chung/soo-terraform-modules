@@ -1,4 +1,4 @@
-
+v0.6
 soo-terraform-modules.git//
 - aws/
   - auto_scaling/
@@ -19,11 +19,12 @@ soo-terraform-modules.git//
   - iam/
     - aws_iam_policy
     - aws_iam_role
-  - lambda/ -YET
+  - lambda/ -> NOT YET
     - aws_lambda_function
   - rds/
     - aws_db_instance
     - aws_db_subnet_group
+    - aws_rds_cluster_instance
   - s3/
     - aws_s3_bucket
   - transit_gateway/
