@@ -10,6 +10,9 @@ soo-terraform-modules.git//
   - ec2/
     - aws_instance
     - aws_launch_template
+  - elastic_beanstalk
+    - aws_elastic_beanstalk_application
+    - aws_elastic_beanstalk_environment
   - elb/
     - aws_lb
     - aws_lb_target_group
@@ -19,7 +22,7 @@ soo-terraform-modules.git//
   - iam/
     - aws_iam_policy
     - aws_iam_role
-  - lambda/ -> NOT YET
+  - lambda/ -> NOT_YET
     - aws_lambda_function
   - rds/
     - aws_db_instance
