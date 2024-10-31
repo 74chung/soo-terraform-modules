@@ -32,7 +32,7 @@ variable "public_ip_activated" {
   type = string
 }
 variable "instance_subnets" { # Subnet List ","
-  type = list
+  type = string
 }
 
 ## Instance traffic and scaling
@@ -54,8 +54,8 @@ variable "imdsv1_deactivated" {
   type = string
 }
 
-variable "ec2_security_groups" {
-  type = list
+variable "ec2_security_groups" { # SG List ","
+  type = string
 }
 
 # Capacity
@@ -73,8 +73,8 @@ variable "ondemand_above_base" {
   type = string
 }
 
-variable "instance_types" {
-  type = list
+variable "instance_types" { # Instance type List ","
+  type = string
 }
 
 variable "trigger_metric" {
