@@ -15,7 +15,7 @@ variable "eb_tier" {
 
 ## Service access
 variable "service_role" {
-  type = service_role
+  type = string
 }
 variable "ec2_keypair" {
   type = string
