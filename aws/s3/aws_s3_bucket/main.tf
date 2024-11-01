@@ -44,6 +44,7 @@ data "aws_iam_policy_document" "Deny_non-HTTPS_access" {
       "s3:*"
     ]
     resources = [
+      "${aws_s3_bucket.company_service_env_function_bucket.arn}",
       "${aws_s3_bucket.company_service_env_function_bucket.arn}/*"
     ]
     condition {
