@@ -20,21 +20,21 @@ variable "daily_delete_after" {
   type = string
 }
 
-variable "weekly_retention" {
-  type = string
-}
-variable "weekly_schedule" {
-  type = string
-}
-variable "weekly_start_window" {
-  type = string
-}
-variable "weekly_completion_window" {
-  type = string
-}
-variable "weekly_delete_after" {
-  type = string
-}
+# variable "weekly_retention" {
+#   type = string
+# }
+# variable "weekly_schedule" {
+#   type = string
+# }
+# variable "weekly_start_window" {
+#   type = string
+# }
+# variable "weekly_completion_window" {
+#   type = string
+# }
+# variable "weekly_delete_after" {
+#   type = string
+# }
 
 
 variable "company" {

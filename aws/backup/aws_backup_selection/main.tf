@@ -8,7 +8,7 @@ resource "aws_backup_selection" "company_service_env_resource_selection" {
 
   condition {
     string_equals {
-      key   = "aws:ResourceTag/backup-${var.resource_type}"
+      key   = "aws:ResourceTag/backup-${var.resource_type}" # resource_type=instance, ebs
       value = "enabled"
     }
     string_equals {
