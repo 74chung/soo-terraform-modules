@@ -12,7 +12,7 @@ variable "db_cluster_parameter_group_name" {
 variable "deletion_protection" {
   type = string
 }
-variable "availability_zones" {
+variable "cluster_availability_zones" {
   type = list
 }
 
@@ -97,6 +97,10 @@ variable "instance_class" {
   type = string
 }
 variable "db_parameter_group_name" {
+  type = string
+}
+
+variable "instance_availability_zone" {
   type = string
 }
 

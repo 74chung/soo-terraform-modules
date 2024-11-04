@@ -6,7 +6,7 @@ resource "aws_rds_cluster" "company1_alpha_dev_main_aurorapostgres_cluster" {
   engine_version                  = var.engine_version
   db_cluster_parameter_group_name = var.db_cluster_parameter_group_name
   deletion_protection             = var.deletion_protection # true, false(default) -> 배포 완료 후 Disabled->Enabled 변경 필요
-  availability_zones              = var.availability_zones
+  availability_zones              = var.cluster_availability_zones
 
   master_username = var.master_username
   master_password = var.master_password # APP(DBA)측으로 부터 PW 사전에 공유 받고 배포
@@ -49,6 +49,7 @@ resource "aws_rds_cluster_instance" "company1_alpha_dev_main_aurorapostgres_inst
   db_parameter_group_name = var.db_parameter_group_name
 
   db_subnet_group_name = var.db_subnet_group_name
+  availability_zone    = var.instance_availability_zone
 
   performance_insights_enabled          = var.performance_insights_enabled # true, false(default)
   performance_insights_retention_period = var.performance_insights_retention_period # 7(default), 731(2 years) or a multiple of 31
