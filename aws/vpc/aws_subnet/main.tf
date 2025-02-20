@@ -7,7 +7,7 @@ resource "aws_subnet" "company_service_env_function_subnet" {
   vpc_id            = var.vpc_id
 
   tags = {
-    Name       = "${var.company}-${var.service}-${var.env}-${var.function}-subnet-${replace(var.az[count.index], var.region, "")}"
+    Name       = "${var.company}-${var.service}-${var.env}-${var.function}-${replace(var.az[count.index], var.region, "")}-subnet"
     
     cz-project = var.service
     cz-stage   = var.env

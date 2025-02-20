@@ -1,22 +1,13 @@
 # aws_route_table
 #------------------------------------------------------------------
-variable "az" {
-  type = list
-}
 variable "vpc_id" {
   type = string
-}
-variable "subnet_id" {
-  type = list
 }
 
 variable "company" {
   type = string
 }
 variable "function" {
-  type = string
-}
-variable "region" {
   type = string
 }
 
