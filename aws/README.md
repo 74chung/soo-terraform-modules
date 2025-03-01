@@ -41,6 +41,7 @@ soo-terraform-modules.git//
     - aws_security_group
     - aws_subnet
     - aws_vpc
+    - aws_vpc_flow_log
 
 
 
