@@ -1,7 +1,7 @@
 # aws_ecr_repository
 #------------------------------------------------------------------
 resource "aws_ecr_repository" "company_service_env_function_repo" {
-  name                 = "${var.company}-${var.service}-${var.env}-${var.function}-repo"
+  name                 = "${var.company}-${var.service}-${var.env}-${var.function}"
   image_tag_mutability = var.image_tag_mutability # IMMUTABLE/MUTABLE, default=MUTABLE
 
   encryption_configuration {
