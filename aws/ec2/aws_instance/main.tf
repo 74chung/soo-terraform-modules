@@ -9,6 +9,10 @@ resource "aws_instance" "company_service_env_function_ec2" {
   vpc_security_group_ids      = var.vpc_security_group_ids
   disable_api_termination     = var.disable_api_termination
 
+  metadata_options {
+    http_tokens   = "required" # IMDSv2 configuration, optional/required
+  }
+
   root_block_device {
     volume_type           = var.root_ebs_volume_type
     volume_size           = var.root_ebs_volume_size # GB
