@@ -9,7 +9,7 @@ variable "bucket_key_enabled" {
 variable "logging_target_bucket" {
   type = string
 }
-variable "policy" {
+variable "bucket-policy" {
   type = string
 }
 

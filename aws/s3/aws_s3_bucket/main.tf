@@ -35,6 +35,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "bucket_server_sid
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.company_service_env_function_bucket.id
   policy = <<EOF
-${var.policy}
+${var.bucket-policy}
 EOF
 }
