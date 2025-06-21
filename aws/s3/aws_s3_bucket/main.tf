@@ -26,35 +26,15 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "bucket_server_sid
     bucket_key_enabled = var.bucket_key_enabled
   }
 }
-resource "aws_s3_bucket_logging" "bucket_logging" {
-  bucket        = aws_s3_bucket.company_service_env_function_bucket.id
-  target_bucket = var.logging_target_bucket # server access logging, bucket name=bucket id
-  target_prefix = "${aws_s3_bucket.company_service_env_function_bucket.id}/"
-}
+# resource "aws_s3_bucket_logging" "bucket_logging" {
+#   bucket        = aws_s3_bucket.company_service_env_function_bucket.id
+#   target_bucket = var.logging_target_bucket # server access logging, bucket name=bucket id
+#   target_prefix = "${aws_s3_bucket.company_service_env_function_bucket.id}/"
+# }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.company_service_env_function_bucket.id
-  policy = data.aws_iam_policy_document.Deny_non-HTTPS_access.json
-}
-data "aws_iam_policy_document" "Deny_non-HTTPS_access" {
-  statement {
-    sid     = "Deny non-HTTPS access"
-    effect  = "Deny"
-    actions = [
-      "s3:*"
-    ]
-    resources = [
-      "${aws_s3_bucket.company_service_env_function_bucket.arn}",
-      "${aws_s3_bucket.company_service_env_function_bucket.arn}/*"
-    ]
-    condition {
-      test     = "Bool"
-      variable = "aws:SecureTransport"
-      values   = ["false"]
-    }
-    principals {
-      type        = "*"
-      identifiers = ["*"]
-    }
-  }
+  policy = <<EOF
+${var.policy}
+EOF
 }
