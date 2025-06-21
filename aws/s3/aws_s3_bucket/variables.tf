@@ -6,9 +6,9 @@ variable "versioning_status" {
 variable "bucket_key_enabled" {
   type = string
 }
-variable "logging_target_bucket" {
-  type = string
-}
+# variable "logging_target_bucket" {
+#   type = string
+# }
 variable "bucket-policy" {
   type = string
 }
