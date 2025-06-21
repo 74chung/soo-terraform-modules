@@ -9,9 +9,6 @@ variable "bucket_key_enabled" {
 # variable "logging_target_bucket" {
 #   type = string
 # }
-variable "bucket-policy" {
-  type = string
-}
 
 variable "company" {
   type = string

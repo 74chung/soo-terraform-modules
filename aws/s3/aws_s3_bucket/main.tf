@@ -31,10 +31,3 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "bucket_server_sid
 #   target_bucket = var.logging_target_bucket # server access logging, bucket name=bucket id
 #   target_prefix = "${aws_s3_bucket.company_service_env_function_bucket.id}/"
 # }
-
-resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = aws_s3_bucket.company_service_env_function_bucket.id
-  policy = <<EOF
-${var.bucket-policy}
-EOF
-}
