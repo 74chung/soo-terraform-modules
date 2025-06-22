@@ -1,7 +1,8 @@
 # aws_s3_bucket
 #------------------------------------------------------------------
 resource "aws_s3_bucket" "company_service_env_function_bucket" {
-  bucket = "${var.company}-${var.service}-${var.env}-${var.function}-bucket"
+  bucket        = "${var.company}-${var.service}-${var.env}-${var.function}-bucket"
+  force_destroy = true
 
   tags = {
     cz-project = var.service
