@@ -22,9 +22,6 @@ variable "enable_cross_zone_load_balancing" {
 variable "access_log_bucket" {
   type = string
 }
-variable "access_log_prefix" {
-  type = string
-}
 variable "access_log_enabled" {
   type = string
 }

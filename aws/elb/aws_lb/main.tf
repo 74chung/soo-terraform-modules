@@ -11,7 +11,7 @@ resource "aws_lb" "company_service_env_function_lb" {
 
   access_logs {
     bucket  = var.access_log_bucket # bucket id
-    prefix  = var.access_log_prefix
+    prefix  = "${var.company}-${var.service}-${var.env}-${var.function}lb"
     enabled = var.access_log_enabled # default=false
   }
 
