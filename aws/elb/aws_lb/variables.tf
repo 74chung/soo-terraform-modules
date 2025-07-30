@@ -15,6 +15,19 @@ variable "subnets" {
 variable "enable_deletion_protection" {
   type = string
 }
+variable "enable_cross_zone_load_balancing" {
+  type = string
+}
+
+variable "access_log_bucket" {
+  type = string
+}
+variable "access_log_prefix" {
+  type = string
+}
+variable "access_log_enabled" {
+  type = string
+}
 
 variable "company" {
   type = string

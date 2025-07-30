@@ -1,12 +1,19 @@
 # aws_lb
 #------------------------------------------------------------------
 resource "aws_lb" "company_service_env_function_lb" {
-  name                       = "${var.company}-${var.service}-${var.env}-${var.function}lb"
-  internal                   = var.internal
-  load_balancer_type         = var.load_balancer_type
-  security_groups            = var.security_groups
-  subnets                    = var.subnets
-  enable_deletion_protection = var.enable_deletion_protection
+  name                             = "${var.company}-${var.service}-${var.env}-${var.function}lb"
+  internal                         = var.internal
+  load_balancer_type               = var.load_balancer_type
+  security_groups                  = var.security_groups
+  subnets                          = var.subnets
+  enable_deletion_protection       = var.enable_deletion_protection
+  enable_cross_zone_load_balancing = var.enable_cross_zone_load_balancing # For network and gateway type, default=false, For application always true
+
+  access_logs {
+    bucket  = var.access_log_bucket # bucket id
+    prefix  = var.access_log_prefix
+    enabled = var.access_log_enabled # default=false
+  }
 
   tags = {
     cz-project = var.service
