@@ -4,6 +4,8 @@ resource "aws_cloudwatch_log_group" "company_service_env_function_lg" {
   name              = "${var.company}-${var.service}-${var.env}-vpc-flowlog-lg"
   retention_in_days = var.retention_in_days
 
+  skip_destroy = true # 실제 삭제 방지(상태만 제거)
+
   tags = {
     cz-project = var.service
     cz-stage   = var.env
