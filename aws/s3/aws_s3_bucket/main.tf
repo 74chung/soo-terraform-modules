@@ -17,13 +17,18 @@ resource "aws_s3_bucket" "company_service_env_function_bucket" {
 }
 resource "aws_s3_bucket_versioning" "bucket_versioning" {
   bucket = aws_s3_bucket.company_service_env_function_bucket.id
+  
   versioning_configuration {
     status = var.versioning_status # Enabled, Suspended, Disabled(default, only be used when creating)
   }
 }
 resource "aws_s3_bucket_server_side_encryption_configuration" "bucket_server_side_encryption_configuration" {
   bucket = aws_s3_bucket.company_service_env_function_bucket.id
+
   rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
     bucket_key_enabled = var.bucket_key_enabled
   }
 }

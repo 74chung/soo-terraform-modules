@@ -7,9 +7,13 @@ soo-terraform-modules.git//
     - aws_backup_plan
     - aws_backup_selection
     - aws_backup_vault
+  - ebs/
+    - aws_ebs_volume
   - ec2/
     - aws_instance
     - aws_launch_template
+  - ecr/
+    - aws_ecr_repository
   - elastic_beanstalk
     - aws_elastic_beanstalk_application
     - aws_elastic_beanstalk_environment
@@ -42,8 +46,6 @@ soo-terraform-modules.git//
     - aws_subnet
     - aws_vpc
     - aws_vpc_flow_log
-
-
 
 
 
