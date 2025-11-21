@@ -2,7 +2,7 @@
 #------------------------------------------------------------------
 resource "aws_backup_selection" "company_service_env_resource_selection" {
   name         = "${var.company}-${var.service}-${var.env}-${var.resource_type}-selection"
-  iam_role_arn = "arn:aws:iam::${var.account_id}:role/service-role/AWSBackupDefaultServiceRole"
+  iam_role_arn = var.iam_role_arn
   plan_id      = var.plan_id
   resources    = ["*"]
 

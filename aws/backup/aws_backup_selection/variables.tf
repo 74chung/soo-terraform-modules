@@ -1,6 +1,6 @@
 # aws_backup_selection
 #------------------------------------------------------------------
-variable "account_id" {
+variable "iam_role_arn" {
   type = string
 }
 variable "plan_id" {
